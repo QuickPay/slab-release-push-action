@@ -1,0 +1,18 @@
+name: Automation for release on slab
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  create-update_slab_post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: this workflow creates/updates a post on slab containing release information
+        uses: QuickPay/slab-release-push-action@main
+        with: 
+          repo_name: ${{ github.event.repository.name }}
+          repo_owner: ${{ github.repository_owner }}
+          access_token_slab: "${{ secrets.SLAB_TOKEN }}"
+          access_token_github: "bearer ${{ secrets.GITHUB_TOKEN }}"
+          topic_id: "2w941vt0"
