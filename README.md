@@ -1,8 +1,8 @@
-# Slab-action 
+# slab-release-push-action
 ## a quick rundown
 
 
-The purpose of Slab-action is to automate the publishing of release notes from a GitHub repository to a post in a given topic on Slab. The post on Slab will be named after the date of publishing, in the format ‘DD-MM-YYYY’. For any repository that implements the Slab-action, the flow will be as follows:
+The purpose of slab-release-push-action is to automate the publishing of release notes from a GitHub repository to a post in a given topic on Slab. The post on Slab will be named after the date of publishing, in the format ‘DD-MM-YYYY’. For any repository that implements the slab-release-push-action, the flow will be as follows:
 
 1. When a new release is published on the repository, the workflow executes the `main.rb` script. The repository name and owner, as well as access tokens for both GitHub and Slab, are given as arguments.
 
@@ -30,7 +30,7 @@ It is ***mostly*** out of the question through the API, as you would have to:
     3. Convert it to HTML or MarkDown.
     4. Call the syncPost mutation with the same externalId as the syncPost was created with, with the new content.
 
-  This could be implemented in a later release, but it is advisable to simply wait for Slab to update their API, as the Slab-action would need refactoring   once this happens anyway.
+  This could be implemented in a later release, but it is advisable to simply wait for Slab to update their API, as the slab-release-push-action would need refactoring   once this happens anyway.
 
  2. Converting the format that you get from querying the content of a post on Slab to MarkDown is a bit difficult, so writing the release notes (even in MarkDown) by hand can have weird consequences on the formatting of the resulting Slab post.
 
