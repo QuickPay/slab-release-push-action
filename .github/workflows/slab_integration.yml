@@ -2,7 +2,7 @@ name: Automation for release on slab
 
 on:
   release:
-    types: [published]
+    types: [released]
 
 jobs:
   create-update_slab_post:
