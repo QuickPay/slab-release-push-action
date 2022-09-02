@@ -51,7 +51,7 @@ This is possible to fix by deleting the post and re-creating it, but it is inadv
     runs-on: ubuntu-latest
     steps:
       - name: this workflow creates/updates a on slab containing release information
-        uses:  QuickPay/slab-release-push-action@main
+        uses:  QuickPay/slab-release-push-action@v1.0.0
         with: 
           repo_name: ${{ github.event.repository.name }}
           repo_owner: ${{ github.repository_owner }}
